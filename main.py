@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from win11toast import toast
+import sys
 
 url='https://computer.knu.ac.kr/bbs/board.php?bo_table=sub5_1&sca=%EC%8B%AC%EC%BB%B4'
 
@@ -42,5 +43,5 @@ try:
     with open("current_list_num.txt", "w", encoding="utf-8") as file:
         file.write(new_list_num)
 except requests.exceptions.ConnectionError as errc:
-    exit(0)
+    sys.exit(1)
 
