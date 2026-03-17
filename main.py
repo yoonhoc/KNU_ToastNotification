@@ -1,59 +1,83 @@
-
 import os
+import sys
 import requests
 from bs4 import BeautifulSoup
 from win11toast import toast
-import sys
 
-url='https://computer.knu.ac.kr/bbs/board.php?bo_table=sub5_1&sca=%EC%8B%AC%EC%BB%B4'
-
-
-try:
-    #웹사이트 get
-    data = requests.get(url)
-    soup = BeautifulSoup(data.text, 'html.parser')
-
-    #마지막 업데이트 공지 번호 읽어오기
-    with open("current_list_num.txt", "r",encoding="utf-8") as f:
-        current_num=f.read()
-
-    current_num.strip()
-    start_num=0
-    #최근 공지 번호 get
-    tbody = soup.select_one('#fboardlist > div.basic_tbl_head.tbl_wrap > table > tbody')
-    for row in tbody.find_all('tr'):
-        if row.get('class') != ['bo_notice']:
-            new_list_num=str(row.find("td").text).strip()
-            break
-        else:
-            start_num+=1
+def main():
+    url = 'https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor'
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
     
-    print("startnum:" ,start_num)
-    last_num=start_num+int(new_list_num)-int(current_num)
-    print("lastnum: ",last_num)
-    #업데이트된 공지 가져오기
-    content= soup.select('div.bo_tit a')[start_num:last_num]
+    # Read the last checked notice number
+    try:
+        with open("current_list_num.txt", "r", encoding="utf-8") as f:
+            current_num = int(f.read().strip())
+    except (FileNotFoundError, ValueError):
+        current_num = 0
 
-    #제목, 링크 분류
-    title=[]
-    links=[]
-    for a in content:
-        if(a.text):
-            title.append(str(a.text).strip())
-        if a.get("href"):
-            links.append(str(a.attrs['href']))
+    # Fetch the webpage
+    try:
+        res = requests.get(url, headers=headers, timeout=10)
+        res.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"Network error: {e}")
+        sys.exit(1)
 
-    icon_path = "./knu-emblem.ico"
-    icon_path = os.path.abspath(icon_path)
+    soup = BeautifulSoup(res.text, 'html.parser')
+    tbody = soup.select_one('#fboardlist > div.basic_tbl_head.tbl_wrap > table > tbody')
+    
+    if not tbody:
+        print("Failed to find the notice table in HTML.")
+        sys.exit(1)
 
+    new_notices = []
+    max_num = current_num
 
-    while title and links:  
-        toast(title.pop(),"공지 바로가기기",on_click=links.pop(),icon=icon_path)
+    # Iterate through each row in the notice table
+    for row in tbody.find_all('tr'):
+        # Skip pinned (important) notices
+        if 'bo_notice' in row.get('class', []):
+            continue
+            
+        num_td = row.find('td', class_='td_num2')
+        if not num_td:
+            continue
+            
+        try:
+            notice_num = int(num_td.text.strip())
+        except ValueError:
+            continue
+            
+        # Keep track of the highest notice number seen
+        if notice_num > max_num:
+            max_num = notice_num
 
+        # Stop searching if we reach already seen notices
+        if notice_num <= current_num:
+            break
+            
+        title_tag = row.select_one('.bo_tit a')
+        if title_tag:
+            title = title_tag.text.strip()
+            link = title_tag.get('href', '')
+            if title and link:
+                new_notices.append({'title': title, 'link': link})
 
-    #최신 공지 번호 갱신
-    with open("current_list_num.txt", "w", encoding="utf-8") as file:
-        file.write(new_list_num)
-except requests.exceptions.ConnectionError as errc:
-    sys.exit(1)
+    icon_path = os.path.abspath("./knu-emblem.ico")
+    
+    # Show oldest new notices first
+    for notice in reversed(new_notices):
+        toast(notice['title'], "공지 바로가기", on_click=notice['link'], icon=icon_path)
 
+    # Update the last checked notice number file if there are new notices
+    if max_num > current_num:
+        with open("current_list_num.txt", "w", encoding="utf-8") as f:
+            f.write(str(max_num))
+            print(f"Updated current_list_num.txt to {max_num}")
+    else:
+        print("No new notices found.")
+
+if __name__ == "__main__":
+    main()

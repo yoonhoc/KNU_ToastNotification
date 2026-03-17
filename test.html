@@ -1,0 +1,1852 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+
+<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/favicon/site.webmanifest">
+<link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>공지사항 1 페이지 | 경북대학교 컴퓨터학부</title>
+<link rel="stylesheet" href="https://cse.knu.ac.kr/css/default.css?ver=210618">
+<link rel="stylesheet" href="https://cse.knu.ac.kr/js/font-awesome/css/font-awesome.min.css?ver=210618">
+<link rel="stylesheet" href="https://cse.knu.ac.kr/css/slick.css?ver=210618">
+<link rel="stylesheet" href="https://cse.knu.ac.kr/skin/board/notice_2025/style.css?ver=210618">
+<!--[if lte IE 8]>
+<script src="https://cse.knu.ac.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://cse.knu.ac.kr";
+var g5_bbs_url   = "https://cse.knu.ac.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "sub5_1";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+<script src="https://cse.knu.ac.kr/js/jquery-1.12.4.min.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/jquery-migrate-1.4.1.min.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/jquery.menu.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/common.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/wrest.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/placeholders.min.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/dsso.js?ver=210618"></script>
+<script src="https://cse.knu.ac.kr/js/menucmn.js?ver=210618"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cse.knu.ac.kr/js/slick.min.js?ver=210618"></script>
+</head>
+<body>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
+
+<script>
+	
+//상단 네비고정
+$(document).ready(function(){
+
+	if ( $(".sub_menu").length > 0 ) {
+		$(window).scroll(function  () {
+			var scroll_Top = $(window).scrollTop();
+			var startTop = $("#container_wr").offset().top;
+
+			if ( scroll_Top > startTop ) {
+				$(".sub_menu").addClass("fixed");
+			}else {
+				$(".sub_menu").removeClass("fixed");
+			}
+		});
+	}
+});
+
+</script>
+
+<script>
+//스크롤 애니메이션
+$(function(){
+	var $animation_elements = $('.ani');
+	var $window = $(window);
+
+	function check_if_in_view() {
+	  var window_height = $window.height();
+	  var window_top_position = $window.scrollTop();
+	  var window_bottom_position = (window_top_position + window_height);
+	 
+	  $.each($animation_elements, function() {
+		var $element = $(this);
+		var element_height = $element.outerHeight();
+		var element_top_position = $element.offset().top+ 100;
+		var element_bottom_position = (element_top_position + element_height);
+	 
+		//check to see if this current container is within viewport
+		if ((element_bottom_position >= window_top_position) &&
+			(element_top_position <= window_bottom_position)) {
+		  $element.addClass('in-view');
+		} else {
+		  //$element.removeClass('in-view');
+		}
+	  });
+	}
+	$window.on('scroll resize', check_if_in_view);
+	$window.trigger('scroll');
+
+});
+
+
+</script>
+
+<div class="all_wrap">
+	
+	<!-- 상단 시작 { -->
+	<div class="header">
+		
+<style>
+.navbar{position: fixed; width: 100%; z-index: 20; background-image: url('../images/common/bg_main.png'); background-repeat:repeat;}
+.navbar.fixed{box-shadow: 0 10px 25px 0 rgba(0,0,0,.05); transition: all .6s;}
+
+.nav{max-width: 100%; height: 100px; padding: 0 70px!important; border-bottom: 1px solid #ddd;}
+.nav:after{content: ''; display: block; clear: both;}
+.nav h1.h_logo{float: left; line-height: 96px;}
+.nav h1.h_logo img{width: 250px; mix-blend-mode:darken;}
+.nav.on{background-image: url('../images/common/bg_main.png'); background-repeat:repeat}
+
+.right_menu{position: relative; right: 0px; top: 50%; transform:translateY(-50%); float: right;}
+.right_menu .rm_wrap{padding-right: 70px;}
+.right_menu .rm_wrap ul li{display:inline-block;}
+.right_menu .rm_wrap ul li:last-child{padding-left: 25px; position: relative;}
+.right_menu .rm_wrap ul li:last-child:after{position: absolute; left: 10px; top: 4px; width: 1px; height: 10px; background-color: #ddd; display:block; content:'';}
+.right_menu .rm_wrap ul li a{font-size: 14px; color:#999; letter-spacing:-0.4px;}
+.right_menu .rm_wrap ul li a:hover{font-weight: 500;}
+
+.right_menu .rm_wrap > button{position: absolute; top: -5px; right: 0; z-index: 9; border: none; background: none;}
+
+.right_menu .rm_btn{display:none;}
+
+/* .right_menu .rm_btn p{float: right; height: 3px; transition: all .6s;}
+.right_menu .rm_btn p:nth-of-type(1){width: 20px; background: #2c90c4;}
+.right_menu .rm_btn p:nth-of-type(2){width: 30px; background: #2fc5f4;}
+.right_menu .rm_btn p:nth-of-type(3){width: 25px; background: #2c90c4;}
+.right_menu .rm_btn p+p{margin-top: 5px;}
+.right_menu .rm_btn:hover p{width: 30px;} */
+
+#cssmenu{display:block; width: 100%; height: 100px; text-align: center; margin: 0 auto;}
+#cssmenu .cm_sub{display:inline-block; margin: 0 auto; text-align: center;}
+#cssmenu .cm_sub a{display: block;}
+#cssmenu .cm_sub > h3 > a{padding: 0 35px; line-height: 100px; font-size: 16px; font-weight: 500; color: #101010;}
+#cssmenu .cm_sub .cmslist{display: none; position: absolute; top: 100px; left: 0; width: 100%; background: #fff; box-shadow: 0 30px 30px 0 rgba(0,0,0,.1); z-index: 21; text-align: left;
+ background-image: url('../images/common/bg_main.png'); background-repeat:repeat;}
+#cssmenu .cm_sub .cmslist .cmsinner{display: flex; flex-wrap: wrap; max-width: 1400px; margin: 50px auto 0;}
+#cssmenu .cm_sub .cmslist .cmsinner .cmsbox{flex: 0 1 20%; margin-bottom: 50px; padding-left: 30px; padding-top: 2px; border-left: 1px solid #ddd;}
+#cssmenu .cm_sub:hover .cmslist{display: block;}
+:is(#cssmenu .cm_sub4, #cssmenu .cm_sub6) .cmslist .cmsinner{justify-content: center;}
+
+#cssmenu .cmsbox dl dt h5 a{position: relative; margin-bottom: 20px; font-size: 18px; font-weight: 600; color: #222;}
+#cssmenu .cmsbox dl dd p a{position: relative; padding: 5px 0; font-size: 16px; color: #4c4c4c;}
+#cssmenu .cmsbox dl dd p a:hover{text-decoration: underline;}
+#cssmenu .cmsbox:hover dl dt h5 a{color: #2c90c4;}
+
+
+
+/*모바일메뉴*/
+.mobileMenu{display:none; position:absolute; top: 50%; transform:translateY(-50%); right:40px;}
+.mobileMenu.on{display: none!important;}
+.mobileMenu img{max-width : 100%}
+.mobileMenuXbt{display: none; position:absolute; top: 36px; right:40px;}
+.mobileMenuXbt.on{display: block;}
+.mobileMenuXbt img{width: 22px}
+#gnbM{position: absolute; top: 100px; right: -100%; width: 100%; height: 100vh; background: #fff; z-index:99; transition: all .6s; position: fixed;}
+#gnbM.on{right: 0;}
+#gnbM .monavquick{display: none; padding: 15px; background: #f9f9f9;}
+#gnbM .monavquick ul{display: flex; flex-wrap: wrap;}
+#gnbM .monavquick ul li{flex: 0 1 50%; padding: 5px; text-align: center;}
+#gnbM .monavquick ul li a{display: block; padding: 8px 0; font-size: 14px; color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3);}
+#gnbM .monavcon{display: flex; height: calc(100% - 60px);}
+#gnbM .monavcon .monavtab.tabs{display: flex; flex-direction: column; flex-shrink: 0; width: 100px; height: 100%; background: #2c90c4;}
+#gnbM .monavcon .monavtab.tabs .tab-link{display: table; height: 16.66%; padding: 10px; text-align: center; background: #2c90c4; cursor: pointer;}
+#gnbM .monavcon .monavtab.tabs .tab-link ul{display: table-cell; vertical-align: middle;}
+#gnbM .monavcon .monavtab.tabs .tab-link ul li p{padding-top: 8px; font-size: 14px; color: #fff; word-break: keep-all;}
+#gnbM .monavcon .monavtab.tabs .tab-link.current{background: #31ccb0;}
+#gnbM .monavcon .gnbDiv{flex-grow: 1;}
+#gnbM .monavcon .gnbDiv .tab-content{display:none;}
+#gnbM .monavcon .gnbDiv .tab-content.current{display: inherit;}
+
+#gnbM .gnbDiv a{display:block}
+#gnbM .gnbDiv .one{position: relative; padding: 16px 20px; font-size: 15px; font-weight: 500; color:#333; border-top: 1px solid #eee;}
+#gnbM .gnbDiv .one_none{position: relative; padding: 16px 20px; font-size: 15px; font-weight: 500; color:#333; border-top: 1px solid #eee;}
+#gnbM .gnbDiv .one:nth-last-of-type(1){border-bottom: 1px solid #eee;}
+#gnbM .gnbDiv .one:after{content: ''; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); width: 13px; height: 8px; background: url('../images/common/monavdown.png') 0 0 no-repeat;}
+#gnbM .gnbDiv .one.on{font-weight: 600; color:#2c90c4;}
+#gnbM .gnbDiv .one.on:after{background: url('../images/common/monavup.png') 92% center no-repeat;}
+#gnbM .gnbDiv .two{padding:15px 20px; font-weight: 500; color: #555; border-top:1px solid #eee; background:#f9f9f9;}
+#gnbM .gnbDiv .two .twoD{padding:10px; font-size:14px; color:#464646; border-bottom: 1px solid #eee;}
+
+
+#gnbM .gnbDiv .lang{text-align: right; margin: 10px;}
+#gnbM .gnbDiv .lang a{border-radius:20px; background-color: #f7f7f7; padding: 5px; color:#101010; display:inline-block; border: 1px solid #ddd;}
+
+
+
+@media (max-width: 1740px){
+	.nav{padding: 0 20px;}
+}
+
+@media (max-width:1360px){
+.nav{padding: 0 35px!important;}
+#cssmenu .cm_sub > h3 > a{padding: 0 13px; font-size: 16px;}
+
+#cssmenu .cmsbox dl dt h5 a{font-size: 16px;}
+	#cssmenu .cmsbox dl dd p a{font-size: 15px;}
+	.right_menu .rm_wrap{padding-right: 45px;}
+	.right_menu .rm_wrap ul li a{font-size: 13px;}
+	#cssmenu .cm_sub .cmslist .cmsinner{margin: 30px auto 0;}
+	#cssmenu .cm_sub .cmslist .cmsinner .cmsbox{margin-bottom: 40px; padding-left: 15px;}
+}
+
+
+@media (max-width: 1024px){
+	#cssmenu{display: none;}
+	.right_menu .rm_wrap ul li{display:none;}
+	.right_menu .rm_wrap > button{right: 50px; top: -12px;}
+
+	.mobileMenu{display: block!important; z-index : 10;}	
+	}
+
+@media (max-width: 991px){
+	.nav{height: 80px; padding: 0 30px!important;}
+	.nav h1.h_logo{line-height: 80px;}
+
+	/* .mobileMenu{height: 80px;} */
+	.mobileMenuXbt{top: 31px; right: 30px;}
+	#gnbM{top: 80px;}
+	.mobileMenu{right: 30px;}
+	/*.nav h1.h_logo img{height: 38px;}*/
+}
+@media (max-width: 640px){
+	.nav{height: 70px;}
+	.nav h1.h_logo{line-height: 70px;}
+	/*.nav h1.h_logo a img{height: 32px;}
+
+	 .mobileMenu{height: 60px;} */
+	.mobileMenuXbt{top: 24px;}
+	#gnbM{top: 70px;}
+	.mobileMenu{top: 49%;}
+	.right_menu .rm_wrap > button{right: 40px; top: -10px;}
+	.right_menu .rm_wrap > button img{width: 22px;}
+}
+
+
+/* search */
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.overlay {height: 100%; width: 100%; display: none; position: fixed; z-index: 99; top: 0; left: 0; background-color: rgba(0,0,0, 0.8);}
+.overlay-content{position: relative; top: 50%; transform:translateY(-50%); width: 40%;  text-align: center;  margin-top: 30px;  margin: auto;}
+.overlay-content h4{color:#fff; font-size: 44px; margin-bottom: 20px; font-weight: bold;}
+.overlay-content ul{padding-top: 20px;}
+.overlay-content ul li{color:#fff; font-size: 16px; line-height:26px; text-align: left; word-break:keep-all; letter-spacing:-0.4px; position: relative; padding-left: 10px;}
+.overlay-content ul li:after{display:block; content:''; width: 4px; height: 1px; background-color: #fff; position: absolute; left: 0; top: 10px;}
+.overlay .closebtn{position: absolute; top: 20px; right: 70px; font-size: 50px; cursor: pointer; color: #fff; font-family: 'GmarketSansLight';}
+.overlay input[type=text]{padding: 15px; font-size: 16px; border: none; float: left; width: 94%; background: #fff; color:#666; outline:none;}
+.overlay button {float: left; width: 6%; padding: 15px; background: #2c90c4; font-size: 16px; border: none; cursor: pointer; color:#fff; border: none; outline:none;}
+
+#hd_sch #sch_stx{width: calc(100% - 65px); padding-left: 20px; background-color: #fff; height: 46px; color:#666;}
+#hd_sch #sch_submit{background-color: #fff; padding: 9px; height: 46px;}
+#hd_sch #sch_submit i{color:#2e2e2e; font-size: 20px;}
+
+@media (max-width: 1400px){
+.overlay-content{width: 60%;}
+.overlay .closebtn{right: 35px;}
+}
+
+@media (max-width: 940px){
+.overlay-content{width: 80%;}
+.overlay-content h4{font-size: 38px;}
+}
+
+@media (max-width: 640px){
+.overlay-content h4{font-size: 30px; margin-bottom: 5px;}
+#hd_sch #sch_stx{height: 39px; font-size: 15px;}
+#hd_sch #sch_submit{height: 39px;}
+#hd_sch #sch_submit i{font-size: 18px;}
+.overlay-content ul li{font-size: 15px; line-height:23px;}
+.overlay-content ul li:after{top: 11px;}
+}
+
+@media (max-width: 480px){
+.overlay-content{width: 90%;}
+.overlay-content h4{font-size: 26px; margin-bottom: 3px;}
+
+#hd_sch #sch_stx{height: 34px; font-size: 13px; padding: 12px; width: calc(100% - 50px);}
+#hd_sch #sch_submit{height: 34px; width: 50px;}
+#hd_sch #sch_submit i{font-size: 15px;}
+
+.overlay-content ul{padding-top: 15px;}
+.overlay-content ul li{font-size: 14px; line-height:20px;}
+}
+</style>
+
+
+
+<script>
+//상단 네비고정
+$(document).ready(function(){
+
+	if ( $(".navbar").length > 0 ) {
+		$(window).scroll(function  () {
+			var scroll_Top = $(window).scrollTop();
+			var startTop = $(".wrap").offset().top;
+
+			if ( scroll_Top > startTop ) {
+				$(".navbar").addClass("fixed");
+			}else {
+				$(".navbar").removeClass("fixed");
+			}
+		});
+	}
+});
+
+$(document).ready(function(){
+
+	if ( $(".navbar").length > 0 ) {
+		$(window).scroll(function  () {
+			var scroll_Top = $(window).scrollTop();
+			var startTop = $(".wrap").offset().top;
+
+			if ( scroll_Top > startTop ) {
+				$(".wrap #m_left .mod").addClass("fixed");
+			}else {
+				$(".wrap #m_left .mod").removeClass("fixed");
+			}
+		});
+	}
+});
+</script>
+
+
+
+<!-- 사이트맵 -->
+
+
+
+<style>
+.site_map{display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,.6); z-index: 999;}
+.site_map .sm_inner{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%;}
+.site_map .sm_inner h1{position: relative; padding: 20px 0; text-align: center; font-size: 26px; color: #fff; background: #2c90c4;}
+.site_map .sm_inner h1 button{position: absolute; top: 16px; right: 20px; background: none; border: none;}
+.site_map .sm_inner .sm_con{padding: 50px; background: #fff;}
+.site_map .sm_inner .sm_con > div{float: left; width:16.666%; text-align: center;}
+.site_map .sm_inner .sm_con:after{content: ''; display: block; clear: both;}
+.site_map .sm_box dl dt h5{position: relative; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #eee;}
+.site_map .sm_box dl dt h5:after{content: ''; position: absolute; left: 50%; bottom: -5px; width: 8px; height: 8px; transform:rotate(45deg); margin-left: -6px; background: #2c90c4; z-index: 10;}
+.site_map .sm_box dl dt h5 a{font-size: 19px; font-weight: 600; color: #222;}
+.site_map .sm_box dl dd p{padding: 5px 0;}
+.site_map .sm_box dl dd p a{font-size: 15px; color: #888;}
+.site_map .sm_box dl dd p a:hover{text-decoration: underline;}
+
+
+@media (max-width: 1240px){
+.site_map .sm_inner{width: 70%;}
+}
+@media (max-width: 1024px){
+.site_map .sm_inner h1{padding: 15px 0; font-size: 22px;}
+.site_map .sm_inner .sm_con{padding: 40px;}
+.site_map .sm_box dl dt h5{margin-bottom: 20px; padding-bottom: 20px;}
+.site_map .sm_box dl dt h5 a{font-size: 17px;}
+.site_map .sm_box dl dd p a{font-size: 14px;}
+}
+
+</style>
+
+
+
+<div class="site_map">
+	<div class="sm_inner">
+		<h1>SITE MAP <button class="hpc_sm_close"><img src="https://cse.knu.ac.kr/images/common/menuCloseBtn.gif" alt=""></button></h1>
+		<div class="sm_con">			
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/sub1_1.php">학부소개</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/sub1_1.php">인사말</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub1_2.php">연혁</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub1_3_a.php">현황</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub1_4.php">위치 및 연락처</a></p></dd>
+					<!-- <dd><p><a href="https://cse.knu.ac.kr/sub1_5.php">학부관련연구소</a></p></dd> -->
+					<dd><p><a href="https://cse.knu.ac.kr/sub1_6.php">발전기금</a></p></dd>
+				</dl>
+			</div>
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1">구성원</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1">교수진</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_2">초빙교수</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_3">겸임교수</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_6">방문교수</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_4">명예교수</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_5">직원</a></p></dd>
+				</dl>
+			</div>
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/sub3_1_a.php">교육</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_1_a.php">교육목표 및 개요</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_2_a.php">플랫폼SW&데이터과학전공</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_3_a.php">인공지능컴퓨팅전공</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_4_a.php">글로벌SW융합전공</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_5_a.php">SW융합전공</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub3_6">입학정보</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub3_7.php">국제교류</a></p></dd>
+				</dl>
+			</div>
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/sub4_1.php">연구</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/sub4_1.php">대학원</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub4_2.php">학부관련 연구소</a></p></dd>
+				</dl>
+			</div>
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1">커뮤니티</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1">공지사항</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_a">뉴스</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_a">학부인재모집</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_4">세미나 및 행사</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_5">학부일정</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_6">CSE 해외 프로그램</a></p></dd>
+				</dl>
+			</div>
+			<div class="sm_box">
+				<dl>
+					<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a">학생활동</a></h5></dt>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a">학생회</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub6_2.php">CSE 홍보단</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/sub6_3.php">동아리</a></p></dd>
+					<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_4">웹진</a></p></dd>
+					<!-- <dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_5">경험 공유</a></p></dd> -->
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 검색창 -->
+<div id="myOverlay" class="overlay">
+	<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+	<div class="overlay-content">
+		<h4>Search</h4>
+       <fieldset id="hd_sch">
+                <legend>사이트 내 전체검색</legend>
+                <form name="fsearchbox" method="get" action="https://cse.knu.ac.kr/bbs/search.php" onsubmit="return fsearchbox_submit(this);">
+					<input type="hidden" name="sfl" value="wr_subject||wr_content">
+					<input type="hidden" name="sop" value="and">
+					<label for="sch_stx" class="sound_only">검색어 필수</label>
+					<input type="text" placeholder="검색어를 입력하세요." name="stx" id="sch_stx" maxlength="20">
+					<button type="submit"id="sch_submit" value="검색"><i class="fa fa-search"></i></button>
+			 </form>
+                <script>
+                function fsearchbox_submit(f)
+                {
+                    if (f.stx.value.length < 2) {
+                        alert("검색어는 두글자 이상 입력하십시오.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+
+                    // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+                    var cnt = 0;
+                    for (var i=0; i<f.stx.value.length; i++) {
+                        if (f.stx.value.charAt(i) == ' ')
+                            cnt++;
+                    }
+
+                    if (cnt > 1) {
+                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+
+                    return true;
+                }
+                </script>
+		  </fieldset>
+
+
+		<!-- <form action="/action_page.php"> -->
+			<!-- <input type="text" placeholder="검색어를 입력하세요." name="search"> -->
+			<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+		<!-- </form> -->
+		<ul>
+			<li>검색하고자 하는 키워드 입력 후 Enter 또는 검색아이콘 클릭을 통해 검색해 주세요.</li>
+			<li>통합검색은 홈페이지의 내용을 전체 검색합니다.</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="nav">
+	<h1 class="h_logo"><a href="https://cse.knu.ac.kr/index.php"><img src="https://cse.knu.ac.kr/images/common/logo.png" alt="경북대학교 컴퓨터학부"></a></h1>
+	<div class="right_menu pc_right_menu">
+		<div class="rm_wrap">
+			<ul>
+				<li><a href="/eng/index.php?lang=eng">ENGLISH</a></li>
+				 <li>
+					<!-- 로그인 -->
+										<a href="https://cse.knu.ac.kr/bbs/login.php">LOGIN</a>
+					<!-- //로그인전 -->
+									</li>
+			</ul>
+
+			<!-- <button class="search"><img src="https://cse.knu.ac.kr/images/main/search_btn.png"></button> -->
+			<button class="search openBtn" onclick="openSearch()"><img src="https://cse.knu.ac.kr/images/main/search_btn.png"></button>
+
+			<script>
+				function openSearch() {
+				  document.getElementById("myOverlay").style.display = "block";
+				}
+
+				function closeSearch() {
+				  document.getElementById("myOverlay").style.display = "none";
+				}
+				</script>
+     
+		</div>
+	</div>
+
+	<!-- inukj: 대매뉴 -->
+	<div id="cssmenu">
+
+		<!-- 학부소개 -->
+		<div class="cm_sub cm_sub1">
+			<h3><a href="https://cse.knu.ac.kr/sub1_1.php">학부소개</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">					
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_1.php">인사말</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_2.php">연혁</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox"> 
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_3_a.php">현황</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub1_3_a.php">교수/학생현황</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub1_3_b.php">장학금 지급현황</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub1_3_c.php">졸업생 취업현황 및 진로</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub1_3_d.php">시설공간 현황</a></p></dd>
+							<!--<dd><p><a href="https://cse.knu.ac.kr/file/development_plan_2204.pdf" target="_blank">학부 발전계획 <i class="fa fa-download"></i></a></p></dd>-->
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_4.php">위치 및 연락처</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_6.php">발전기금</a></h5></dt>
+						</dl>
+					</div>
+					<!-- <div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub1_5.php">학부관련연구소</a></h5></dt>
+						</dl>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 구성원 -->
+		<div class="cm_sub cm_sub2">
+			<h3><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1&lang=kor">구성원</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1&lang=kor">교수진</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_2&lang=kor">초빙교수</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_3&lang=kor">겸임교수</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_6&lang=kor">방문교수</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_4&lang=kor">명예교수</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_5&lang=kor">직원</a></h5></dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 교육 -->
+		<div class="cm_sub cm_sub3">
+			<h3><a href="https://cse.knu.ac.kr/sub3_1_a.php">교육</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_1_a.php">교육목표 및 개요</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_1_a.php">교육목표</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_1_b.php">인재상</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_8_a.php">심화컴퓨팅전공</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_8_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_8_b.php">교육과정</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_9_a.php">첨단컴퓨팅연구전공</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_9_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_9_b.php">교육과정</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_3_a.php">인공지능컴퓨팅전공</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_3_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_3_b.php">교육과정</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_2_a.php">플랫폼SW&데이터과학전공<br>(~2025학년)</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_2_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_2_b.php">교육과정</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_4_a.php">글로벌SW융합전공<br>(~2025학년)</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_4_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_4_b.php">교육과정</a></p></dd>
+						</dl>
+					</div>
+					<!-- <div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_5_a.php">SW융합전공</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_5_a.php">전공소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub3_5_b.php">교육과정</a></p></dd> * 이건 주석
+							<dd><p><a href="https://cse.knu.ac.kr/file/knu_sw_convergence_2024.pdf" target="_blank">교육과정 <i class="fa fa-download"></i></a></p></dd>
+						</dl>
+					</div> -->
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub3_6&lang=kor">입학정보</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub3_7.php">국제교류</a></h5></dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 대학원 : "연구"로 변경 -->
+		<div class="cm_sub cm_sub4">
+			<h3><a href="https://cse.knu.ac.kr/sub4_1.php">연구</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub4_1.php">대학원</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub4_2.php">학부관련연구소</a></h5></dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<!-- 커뮤니티 -->
+		<div class="cm_sub cm_sub5">
+			<h3><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor">커뮤니티</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor">공지사항</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_a&lang=kor">뉴스</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_a&lang=kor">학부성과</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_b&sst=wr_datetime&sod=desc&lang=kor">갤러리</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_a&lang=kor">학부인재모집</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_a&lang=kor">학부인재모집</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_b&lang=kor">취업정보</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_4&lang=kor">세미나 및 행사</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub5_5.php">학부일정</a></h5></dt>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_6&lang=kor">CSE 해외 프로그램</a></h5></dt>
+						</dl>
+					</div>
+					<!-- <div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_5&lang=kor">갤러리</a></h5></dt>
+						</dl>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 학생활동 -->
+		<div class="cm_sub cm_sub6">
+			<h3><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a&lang=kor">학생활동</a></h3>
+			<div class="cmslist">
+				<div class="cmsinner">
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a&lang=kor">학생회</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a&lang=kor">학생회 공지사항</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/sub6_1_b.php">학생회 소개</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub6_2.php">CSE 홍보단</a></h5></dt>
+							<dd><p><a href="https://cse.knu.ac.kr/sub6_2.php">홍보단 소개</a></p></dd>
+							<dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_2_b&lang=kor">웹진</a></p></dd>
+                            <dd><p><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_2_c&lang=kor">카드 뉴스</a></p></dd>
+						</dl>
+					</div>
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/sub6_3.php">동아리</a></h5></dt>
+						</dl>
+					</div>
+					<!-- <div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_4&lang=kor">웹진</a></h5></dt>
+						</dl>
+					</div> -->
+					<div class="cmsbox">
+						<dl>
+							<dt><h5><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_4&lang=kor">경험 공유</a></h5></dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>	
+</div>
+
+
+
+<!--풀다운메뉴/모바일메뉴-->
+<script type="text/javascript">/*모바일메뉴용*/
+	//<![CDATA[
+	var oneNum = -1, twoNum = -1, thrNum = -1, fouNum = -1;
+	//]]>
+</script>
+<script type="text/javascript" src="https://cse.knu.ac.kr/js/menucmn.js"></script>
+
+
+
+<!--모바일 메뉴버튼 -->
+<a href="javascript:" class="mobileMenu">
+	<img src="/images/common/h_menu.png" alt="" class="mMenu">
+	<!-- <img src="/images/menuButton_over.gif" alt="" class="mMenuOver"> -->
+</a>
+<!--//모바일 메뉴버튼 -->
+<a href="javascript:" class="mobileMenuXbt"><img src="https://cse.knu.ac.kr/images/common/close_btn.png" alt="닫기"></a><!--닫기버튼-->
+
+
+
+<!-- 모바일 gnb -->
+<div id="gnbM">
+
+	<div class="monavcon">
+		
+		<div class="monavtab tabs">
+			<div class="tab-link current" data-tab="tab-1">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon1.png" alt=""></li>
+					<li><p>학부소개</p></li>
+				</ul>			
+			</div>
+			<div class="tab-link" data-tab="tab-2">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon2.png" alt=""></li>
+					<li><p>구성원</p></li>
+				</ul>			
+			</div>
+			<div class="tab-link" data-tab="tab-3">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon3.png" alt=""></li>
+					<li><p>교육</p></li>
+				</ul>		
+			</div>
+			<div class="tab-link" data-tab="tab-4">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon4.png" alt=""></li>
+					<li><p>연구</p></li>
+				</ul>			
+			</div>
+			<div class="tab-link" data-tab="tab-5">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon5.png" alt=""></li>
+					<li><p>커뮤니티</p></li>
+				</ul>		
+			</div>
+			<div class="tab-link" data-tab="tab-6">
+				<ul>
+					<li><img src="https://cse.knu.ac.kr/images/common/monavicon6.png" alt=""></li>
+					<li><p>학생활동</p></li>
+				</ul>			
+			</div>
+		</div>
+
+		<script>
+		$(document).ready(function(){
+
+			$('div.tabs .tab-link').click(function(){
+				var tab_id = $(this).attr('data-tab');
+
+				$('div.tabs .tab-link').removeClass('current');
+				$('.tab-content').removeClass('current');
+
+				$(this).addClass('current');
+				$("#"+tab_id).addClass('current');
+			})
+
+		});
+		</script>
+
+		<div class="gnbDiv">
+			<!--대메뉴1-->
+			<div id="tab-1" class="tab-content current">
+				<a href="https://cse.knu.ac.kr/sub1_1.php" class="one_none">인사말</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub1_1.php" class="twoD">인사말</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/sub1_2.php" class="one_none">연혁</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub1_2.php" class="twoD">연혁</a>
+				</div>-->
+				<a href="javascript:;" class="one">현황</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub1_3_a.php" class="twoD">교수/학생현황</a>
+					<a href="https://cse.knu.ac.kr/sub1_3_b.php" class="twoD">장학금 지급현황</a>
+					<a href="https://cse.knu.ac.kr/sub1_3_c.php" class="twoD">졸업생 취업현황 및 진로</a>
+					<a href="https://cse.knu.ac.kr/sub1_3_d.php" class="twoD">시설공간 현황</a>
+					<!--<a href="https://cse.knu.ac.kr/file/development_plan_2204.pdf" download="학과 발전계획(2022_컴퓨터학부)" target="_blank"  class="twoD">학부 발전계획 <i class="fa fa-download"></i></a>-->
+				</div>
+				<a href="https://cse.knu.ac.kr/sub1_4.php" class="one_none">위치 및 연락처</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub1_4.php" class="twoD">위치 및 연락처</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/sub1_6.php" class="one_none">발전기금</a>
+				<!-- <a href="javascript:;" class="one">학부관련연구소</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub1_5.php" class="twoD">학부관련연구소</a>
+				</div> -->
+			</div>
+
+			<!--대메뉴2-->
+			<div id="tab-2" class="tab-content">
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1&lang=kor" class="one_none">교수진</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_1&lang=kor" class="twoD">교수진</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_2&lang=kor" class="one_none">초빙교수</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_2&lang=kor" class="twoD">초빙교수</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_3&lang=kor" class="one_none">겸임교수</a>
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_6&lang=kor" class="one_none">방문교수</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_3&lang=kor" class="twoD">겸임교수</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_4&lang=kor" class="one_none">명예교수</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_4&lang=kor" class="twoD">명예교수</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_5&lang=kor" class="one_none">직원</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub2_5&lang=kor" class="twoD">직원</a>
+				</div>-->
+			</div>
+
+			<!--대메뉴3-->
+			<div id="tab-3" class="tab-content">
+				<a href="javascript:;" class="one">교육목표 및 개요</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_1_a.php" class="twoD">교육목표</a>
+					<a href="https://cse.knu.ac.kr/sub3_1_b.php" class="twoD">인재상</a>
+				</div>
+				<a href="javascript:;" class="one">심화컴퓨팅전공</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_8_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/sub3_8_b.php" class="twoD">교육과정</a>
+				</div>
+				<a href="javascript:;" class="one">첨단컴퓨팅연구전공</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_9_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/sub3_9_b.php" class="twoD">교육과정</a>
+				</div>
+				<a href="javascript:;" class="one">인공지능컴퓨팅전공</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_3_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/sub3_3_b.php" class="twoD">교육과정</a>
+				</div>
+				<a href="javascript:;" class="one">플랫폼SW&데이터과학전공<br>(~2025학년)</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_2_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/sub3_2_b.php" class="twoD">교육과정</a>
+				</div>
+				<a href="javascript:;" class="one">글로벌SW융합전공<br>(~2025학년)</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_4_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/sub3_4_b.php" class="twoD">교육과정</a>
+				</div>
+				<!-- <a href="javascript:;" class="one">SW융합전공</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_5_a.php" class="twoD">전공소개</a>
+					<a href="https://cse.knu.ac.kr/file/knu_sw_convergence_2024.pdf" class="twoD" target="_blank">교육과정 <i class="fa fa-download"></i></a>
+				</div> -->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub3_6&lang=kor" class="one_none">입학정보</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub3_6&lang=kor" class="twoD">입학정보</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/sub3_7.php" class="one_none">국제교류</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub3_7.php" class="twoD">국제교류</a>
+				</div>-->
+			</div>
+
+			<!--대메뉴4-->
+			<div id="tab-4" class="tab-content">
+				<a href="https://cse.knu.ac.kr/sub4_1.php" class="one_none">대학원</a>
+				<a href="https://cse.knu.ac.kr/sub4_2.php" class="one_none">학부관련연구소</a>
+				<!--<div style="display: none;" class="two">					
+					<a href="https://cse.knu.ac.kr/sub4_1.php" class="twoD">대학원 소개</a>
+				</div>-->
+			</div>
+
+			<!--대메뉴5-->
+			<div id="tab-5" class="tab-content">
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor" class="one_none">공지사항</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor" class="twoD">공지사항</a>
+				</div>-->
+				<a href="javascript:;" class="one">뉴스</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_a&lang=kor" class="twoD">학부성과</a>
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_b&sst=wr_datetime&sod=desc&lang=kor" class="twoD">갤러리</a>
+				</div>
+				<a href="javascript:;" class="one">학부인재모집</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_a&lang=kor" class="twoD">학부인재모집</a>
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_b&lang=kor" class="twoD">취업정보</a>
+				</div>
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_4&lang=kor" class="one_none">세미나</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_4" class="twoD">세미나</a>
+				</div>-->
+				<!-- <a href="javascript:;" class="one">갤러리</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_5" class="twoD">갤러리</a>
+				</div> -->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_6&lang=kor" class="one_none">CSE 해외 프로그램</a>
+			</div>
+
+			<!--대메뉴6-->
+			<div id="tab-6" class="tab-content">
+				<a href="javascript:;" class="one">학생회</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_1_a&lang=kor" class="twoD">학생회 공지사항</a>
+					<a href="https://cse.knu.ac.kr/sub6_1_b.php" class="twoD">학생회 소개</a>
+				</div>
+				<a href="javascript:;" class="one">CSE 홍보단</a>
+				<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub6_2.php" class="twoD">홍보단 소개</a>
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_2_b&lang=kor" class="twoD">웹진</a>
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_2_c&lang=kor" class="twoD">카드 뉴스</a>
+				</div>
+				<a href="https://cse.knu.ac.kr/sub6_3.php" class="one_none">동아리</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/sub6_3.php" class="twoD">동아리</a>
+				</div>-->
+				<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_4&lang=kor" class="one_none">경험 공유</a>
+				<!--<div style="display: none;" class="two">
+					<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub6_5&lang=kor" class="twoD">경험 공유</a>
+				</div>-->
+			</div>
+			<div class="lang">
+				<a href="/eng/index.php">ENGLISH</a>
+					<!-- 로그인 -->
+										<a href="https://cse.knu.ac.kr/bbs/login.php">LOGIN</a>
+					<!-- //로그인전 -->
+								</div>
+		</div>		
+	</div>
+</div>
+<!-- //모바일 gnb -->	<!-- //header -->
+
+
+
+	</div>
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+	<!--서브비주얼-->
+	<div id="sVisual" class="bg5">
+		<div class="loca" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
+			<ul class="loc">
+								<li>커뮤니티</li>
+				<li class="last">공지사항</li>
+							</ul>
+		</div>
+		<!--슬로건-->
+		<div class="slogan" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
+			<ul>
+				<li>
+					<h1 class="big-tit">
+										커뮤니티										</h1>
+				</li>
+			</ul>
+		</div>
+		<div class="s-navi">
+					</div>
+	</div>
+	<!--//서브 비주얼-->
+	<!-- } 상단 끝 -->
+
+
+    <div id="container_wr">
+		<!-- 서브메뉴 -->
+		<div class="sub_menu">
+			
+<style type="text/css">
+
+.accordion > li > a.box_add{background:url('../images/sub/bg_s_menu2.png') no-repeat 93% 11px!important;}
+
+/* 페이지인식-메인 */
+#page5 #menu01 > .box5_5_1 {
+	display:block;
+	font-weight: bold;
+	color:#222;
+	/* background:url('../images/sub/bg_s_menu2.png') no-repeat 93% 15px; */
+	position: relative;
+}
+#page5 #menu01 > .box5_5_1:after{position: absolute; left: -155px; top: 15px; width: 150px; height: 2px; background-color: #2c90c4; display:block; content:'';}
+
+.sub_ul{background-color: #fff; border: 1px solid #eee; padding: 10px 0;}
+.sub_ul li{border: none!important; border-bottom:1px solid #dfdfdf; margin-bottom:0 !important;height:40px; background: none!important;}
+.sub_ul li a{font-size:15px; color:#252525; padding-left: 30px!important; position: relative;}
+.sub_ul li a:after{position: absolute; width: 4px; height: 4px; left: 15px; top: 15px; background-color: #444; border-radius:50%; display:block; content:'';}
+.sub_ul li:last-child a{border-bottom: none!important;}
+.sub_ul li:hover{text-decoration:underline;}
+
+.mb0{margin-bottom:0 !important;}
+.sub_ul { display: none;}
+
+.accordion > li.active .sub_ul{display:block!important;}
+.accordion > li.active .sub_ul li a{padding: 7px 10px;}
+
+/* 페이지인식-서브 */
+#page5 .sub_ul .btn1_ {display:block; color:#8d002a!important;background:none;}
+#page5 .sub_ul .btn1_:before{
+	background: #222;
+    content: '';
+    width: 3px;
+    top: 22px;
+    left: 0;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+</style>
+
+
+<div class="p_tit_bg">
+	<p class="tit">교육</p>
+</div>
+<div class="vNav" id="page5">
+	<ul class="accordion">
+		<li id="menu01" class='active'><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&lang=kor" class="box5_5_1">공지사항</a></li>
+
+		<li id="menu02" ><a href="#" onclick="return false" class="box5_5_2 box_add">뉴스</a>
+			<ul class="sub_ul">
+				<li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_a&lang=kor" class="btn1_1">학부성과</a></li>
+				<li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_2_b&lang=kor" class="btn1_2">갤러리</a></li>
+			</ul>
+		</li>
+
+		<li id="menu03" ><a href="#" onclick="return false" class="box5_5_3 box_add">학부인재모집</a>
+			<ul class="sub_ul">
+				<li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_a&lang=kor" class="btn1_1">학부인재모집</a></li>
+				<li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_3_b&lang=kor" class="btn1_2">취업정보</a></li>
+			</ul>
+		</li>
+
+		<li id="menu04" ><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_4&lang=kor" class="box5_5_4">세미나 및 행사</a></li>
+
+		<li id="menu05" ><a href="https://cse.knu.ac.kr/sub5_5.php" class="box5_5_5">학부일정</a></li>
+        
+        <li id="menu06" ><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_6&lang=kor" class="box5_5_6">CSE 해외 프로그램</a></li>
+	</ul>
+</div>
+
+<script>
+
+$('.accordion > li').click(function() {
+    if ( $(this).hasClass('active') ) {
+        $(this).find('.sub_ul').stop().slideUp(300);
+        $(this).removeClass('active');
+    }
+    else {
+        $(this).find('.sub_ul').stop().slideDown(300);
+        $(this).addClass('active');
+    }
+});
+
+</script>
+		</div>
+		
+		<!-- //서브메뉴 -->
+
+		<div id="sub_container">
+					
+			<!-- <h2 id="container_title"><span title="공지사항 1 페이지">공지사항</span></h2> -->
+			
+							<h2 id="container_title"><span>공지사항 <b>공지사항</b></span></h2>
+							
+<!-- 게시판 목록 시작 { -->
+<div id="bo_list" style="max-width:1500px; margin: 0 auto;">
+	
+	 <!-- 게시판 카테고리 시작 { -->
+        <nav id="bo_cate">
+        <h2>공지사항 카테고리</h2>
+        <ul id="bo_cate_ul">
+            <li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1" id="bo_cate_on">전체</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80">일반공지</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%ED%95%99%EC%82%AC">학사</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9E%A5%ED%95%99">장학</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%8B%AC%EC%BB%B4">심컴</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%B2%A8%EC%BB%B4">첨컴</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%B8%EC%BB%B4">인컴</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EA%B8%80%EC%86%9D">글솝</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%ED%94%8C%EC%86%9D%5B%EA%B5%AC.%EC%8B%AC%EC%BB%B4%5D">플솝[구.심컴]</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=ICT%EC%9C%B5%ED%95%A9%5B%ED%95%99%EB%B6%80%5D">ICT융합[학부]</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EB%8C%80%ED%95%99%EC%9B%90">대학원</a></li><li><a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EB%8C%80%ED%95%99%EC%9B%90+%EA%B3%84%EC%95%BD%ED%95%99%EA%B3%BC">대학원 계약학과</a></li>        </ul>
+    </nav>
+        <!-- } 게시판 카테고리 끝 -->
+
+    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+    <div id="bo_btn_top">
+        <div id="bo_list_total">
+            <span>Total 7,806건</span>
+            1 Page
+        </div>
+
+            </div>
+    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+
+    <form name="fboardlist" id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+    <input type="hidden" name="bo_table" value="sub5_1">
+    <input type="hidden" name="sfl" value="">
+    <input type="hidden" name="stx" value="">
+    <input type="hidden" name="spt" value="">
+    <input type="hidden" name="sca" value="">
+    <input type="hidden" name="sst" value="wr_datetime desc">
+    <input type="hidden" name="sod" value="">
+    <input type="hidden" name="page" value="1">
+    <input type="hidden" name="sw" value="">
+
+    <div class="basic_tbl_head tbl_wrap">
+        <table>
+        <caption>공지사항 목록</caption>
+        <thead>
+        <tr>
+                        <th scope="col">번호</th>
+            <th scope="col" class="hidden-xs">제목</th>
+			<!-- <th scope="col" class="visible-xs align_c" style="border-bottom:0;">컨텐츠</th> -->
+            <th scope="col">글쓴이</th>
+            <th scope="col" class="hidden-xs" style="width:100px;"><a href="/bbs/board.php?bo_table=sub5_1&amp;sop=and&amp;sst=wr_hit&amp;sod=desc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">조회수<i class="fa fa-sort" aria-hidden="true"></i></a></th>
+           <!--            -->
+            <th scope="col" class="hidden-xs"><a href="/bbs/board.php?bo_table=sub5_1&amp;sop=and&amp;sst=wr_datetime&amp;sod=desc&amp;sfl=&amp;stx=&amp;sca=&amp;page=1">날짜<i class="fa fa-sort" aria-hidden="true"></i></a></th> 
+        </tr>
+        </thead>
+        <tbody>
+                <tr class="">
+            				<td class="td_num2">
+				7801				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%B8%EC%BB%B4" class="bo_cate_link">인컴</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29088">
+                                                                        [성적] 인컴 교과구분 변경 안내 
+                       
+                    </a>
+					
+                                        						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-17&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>2				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">임초록</span></td>
+            <td class="td_num hidden-xs">2</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-17</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7800				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9E%A5%ED%95%99" class="bo_cate_link">장학</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29087">
+                                                                        2026학년도 1학기 다문화가정 장학금 장학생 선발 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-17&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>50				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">노휘</span></td>
+            <td class="td_num hidden-xs">50</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-17</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7799				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29086">
+                                                                        [TUTOR] 2026학년도 1학기 학부생 TUTOR 모집 안내(4차) 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-17&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>159				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">방원길</span></td>
+            <td class="td_num hidden-xs">159</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-17</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7798				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29085">
+                                                                        2026학년도 상반기 익산시 대학생 학자금 대출이자 지원 사업 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-17&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>89				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">노휘</span></td>
+            <td class="td_num hidden-xs">89</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-17</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7797				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29084">
+                                                                        [학생] 대학생 보이스 피싱 예방 안내 
+                       
+                    </a>
+					
+                                        						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-13&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1223				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">임초록</span></td>
+            <td class="td_num hidden-xs">1223</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-13</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7796				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29083">
+                                                                        [도서관] 2026학년도 독서리뷰 이벤트 &#034;추천도서 서평달기&#034; 실시 안내 
+                       
+                    </a>
+					
+                                        						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-13&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1306				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">노휘</span></td>
+            <td class="td_num hidden-xs">1306</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-13</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7795				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29082">
+                                                                        [학생] 2026학년도 신입생 진로설계 패키지(웰컴 키트) 배부 안내(3.17.~19., 10:00~17:0… 
+                       
+                    </a>
+					
+                                        						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-13&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1613				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">임초록</span></td>
+            <td class="td_num hidden-xs">1613</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-13</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7794				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29081">
+                                                                        2026년도 상반기 군산시 대학생 학자금 이자 지원 사업 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-13&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1281				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">노휘</span></td>
+            <td class="td_num hidden-xs">1281</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-13</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7793				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29080">
+                                                                        [학생] 2026학년도 1학기 지도교수 배정 및 변경 안내(필독!) 
+                       
+                    </a>
+					
+                                        						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1759				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">임초록</span></td>
+            <td class="td_num hidden-xs">1759</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7792				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29079">
+                                                                        [TUTOR] 2026학년도 1학기 학부생 TUTOR 모집 안내(3차) 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1718				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">방원길</span></td>
+            <td class="td_num hidden-xs">1718</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7791				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29078">
+                                                                        2026학년도 ICT학점연계 프로젝트 인턴쉽 &#034;글로벌과정&#034; 하반기(7월~12월) 참여학생 모집 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1779				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">방원길</span></td>
+            <td class="td_num hidden-xs">1779</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7790				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EC%9D%BC%EB%B0%98%EA%B3%B5%EC%A7%80" class="bo_cate_link">일반공지</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29077">
+                                                                        [KISIA] 2026년도 대학정보보호동아리(KUCIS) 참여 동아리 모집 안내(~4.3) 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1616				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">노휘</span></td>
+            <td class="td_num hidden-xs">1616</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7789				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EB%8C%80%ED%95%99%EC%9B%90+%EA%B3%84%EC%95%BD%ED%95%99%EA%B3%BC" class="bo_cate_link">대학원 계약학과</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29076">
+                                                                        2026학년도 1학기 대학원 수료생 등록(2차) 계획 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1531				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">김채원</span></td>
+            <td class="td_num hidden-xs">1531</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7788				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EB%8C%80%ED%95%99%EC%9B%90" class="bo_cate_link">대학원</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29075">
+                                                                        2026학년도 1학기 대학원 수료생 등록(2차) 계획 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-12&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1546				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">공미화</span></td>
+            <td class="td_num hidden-xs">1546</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-12</td>
+
+        </tr>
+                <tr class="">
+            				<td class="td_num2">
+				7787				</td>
+
+            <td class="td_subject" style="padding-left:0px">
+                                <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;sca=%EB%8C%80%ED%95%99%EC%9B%90" class="bo_cate_link">대학원</a>
+                                <div class="bo_tit">
+                    
+                    <a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;wr_id=29074">
+                                                                        대학원 학점 인정 신청 관련 안내 
+                       
+                    </a>
+					
+                    <i class="fa fa-download" aria-hidden="true"></i>                    						
+						                </div>
+				<!-- <span class="visible-xs clearfix" style="line-height: 35px;">
+					<i class="fa fa-calendar-o fa-fw"></i>2026-03-11&nbsp;&nbsp; <i class="fa fa-eye fa-fw"></i>1816				</span> -->
+            </td>
+            <td class="td_name sv_use"><span class="sv_member">공미화</span></td>
+            <td class="td_num hidden-xs">1816</td>
+            <!--             -->
+            <td class="td_datetime hidden-xs">2026-03-11</td>
+
+        </tr>
+                        </tbody>
+        </table>
+    </div>
+
+    
+    </form>
+
+	<!-- 페이지 -->
+	<nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=4" class="pg_page">4<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=5" class="pg_page">5<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=6" class="pg_page">6<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=7" class="pg_page">7<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=8" class="pg_page">8<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=9" class="pg_page">9<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=10" class="pg_page">10<span class="sound_only">페이지</span></a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=11" class="pg_page pg_next">다음</a>
+<a href="https://cse.knu.ac.kr/bbs/board.php?bo_table=sub5_1&amp;page=521" class="pg_page pg_end">맨끝</a>
+</span></nav>     
+       <!-- 게시판 검색 시작 { -->
+    <fieldset id="bo_sch">
+        <legend>게시물 검색</legend>
+
+        <form name="fsearch" method="get">
+        <input type="hidden" name="bo_table" value="sub5_1">
+        <input type="hidden" name="sca" value="">
+        <input type="hidden" name="sop" value="and">
+        <label for="sfl" class="sound_only">검색대상</label>
+        <select name="sfl" id="sfl">
+            <option value="wr_subject">제목</option>
+            <option value="wr_content">내용</option>
+            <option value="wr_subject||wr_content">제목+내용</option>
+            <option value="mb_id,1">회원아이디</option>
+            <option value="mb_id,0">회원아이디(코)</option>
+            <option value="wr_name,1">글쓴이</option>
+            <option value="wr_name,0">글쓴이(코)</option>
+        </select>
+        <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+        <input type="text" name="stx" value="" required id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
+        <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+        </form>
+    </fieldset>
+    <!-- } 게시판 검색 끝 -->   
+</div>
+
+
+
+
+
+
+
+<!-- } 게시판 목록 끝 -->
+
+
+   
+
+	</div>
+	</section>
+
+</div>
+
+<style>
+	@media (max-width: 1720px){
+
+footer{margin: 0 35px 0 40px;}
+}
+
+@media (max-width: 1540px){
+footer .footer_sns{margin-bottom: 10px;}
+footer .f_right .f_bot .select_footer{width: 140px; height: 35px; line-height:32px; margin-right: 10px;}
+footer .f_right .f_bot .select_footer .select_f_btn{font-size: 13px;}
+footer .f_right .f_bot .select_footer ul{bottom: 34px;}
+footer .f_right .f_bot .select_footer ul li{font-size: 13px; padding: 8px 15px;}
+
+}
+
+
+@media (max-width: 1400px){
+
+footer{position: relative;}
+footer .f_left{float: inherit; margin-bottom: 20px;}
+footer .f_right{float: inherit; text-align: right;}
+footer .footer_sns{position: absolute; right: 30px; top: 30px;}
+}
+
+
+
+@media (max-width: 1340px){
+
+footer{margin: 0; padding: 20px 0;}
+footer .left_foot{display:block; text-align: left; padding: 0; border-top: none;}
+footer .footer_sns{top: 20px;}
+footer .left_foot p{margin-top: 20px;}
+}
+
+
+@media (max-width: 640px){
+
+.left_foot ul li{margin-right: 20px;}
+.left_foot ul li:after{right: -14px;}
+.left_foot ul li a{font-size: 13px;}
+
+footer .f_left{margin-top: 30px;}
+footer .f_left p{font-size: 13px; line-height:19px;}
+footer .left_foot p{font-size: 13px;}
+
+}
+
+@media (max-width: 640px){
+footer{padding: 70px 0 20px;}
+footer .footer_sns{right: auto; left: 50%; transform:translateX(-50%);}
+}
+
+@media (max-width: 500px){
+footer .f_left p br.mo{display:block;}
+}
+</style>
+
+<footer>
+		<div class="f_left">
+			<p style="margin-bottom: 10px;">경북대학교 IT대학 컴퓨터학부 <br>	
+			우)41566 대구광역시 북구 대학로 80 / IT대학 융복합관 317호(건물번호 : 415) <br>
+			TEL. 학부 : 950-5550 , 대학원 : 950-6420 <br class="mo">FAX. 053-957-4846 　 <br class="mo">E-mail. scse@knu.ac.kr<br>
+			담당자 현황 : <a href="https://computer.knu.ac.kr/bbs/board.php?bo_table=sub2_5">링크연결</a></p>
+			<p>Copyright(c) 2022, KNU CSE All rights reserved</p>
+		</div>
+		<div class="f_right">
+			<div class="footer_sns">
+				<ul>
+					<li class="face"><a href="https://www.facebook.com/CSEatKNU/" target="_blank"></a></li>
+					<li class="insta"><a href="https://www.instagram.com/knu_cse_pr/" target="_blank"></a></li>
+				</ul>
+			</div>
+			<div class="f_bot">
+				<div class="select_footer">
+					<ul>
+						<li><a title="새창으로 이동" target="_blank" href="http://swedu.knu.ac.kr/">SW중심대학사업단</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://prime.knu.ac.kr/">프라임사업단</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://bk21plus.knu.ac.kr/index.php">BK21플러스사업단</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://linc.knu.ac.kr/">LINC사업단</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://abeek.knu.ac.kr/">KNU ABEEK</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://swedu.knu.ac.kr">소프트웨어교육원</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="https://fric.knu.ac.kr/">외국학술지지원센터</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://hustar-ict.knu.ac.kr">HuStar ICT 혁신대학사업단</a></li>
+					</ul>		
+					<button class="select_f_btn" type="button">
+						<span class="ir">관련 사이트</span>
+					</button>
+				</div>
+				<div class="select_footer">
+					<ul>
+						<li><a title="새창으로 이동" target="_blank" href="http://www.knuiedt.re.kr">공학설계연구소</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://brain.knu.ac.kr">뇌과학연구소</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://daci.knu.ac.kr">디지털아트컨텐츠연구소</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://robic.knu.ac.kr/">로봇산업진흥센터</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://www.necst.or.kr/">모바일디스플레이산학연센터</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://www.escrc.re.kr/">산업기술연구소</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://selab.knu.ac.kr/soft/?mid=welcome">소프트웨어기술연구소</a></li>
+						<!-- <li><a title="새창으로 이동" target="_blank" href="#">의료정보원천기술연구소</a></li> -->
+						<li><a title="새창으로 이동" target="_blank" href="http://www.escrc.re.kr/">임베디드소프트웨어연구센터</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://iet.knu.ac.kr/">전자기술연구소</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://csos.knu.ac.kr/">자율군집소프트웨어 플랫포 연구센터</a></li>
+						<li><a title="새창으로 이동" target="_blank" href="http://connected.knu.ac.kr/">초연결융합기술연구소</a></li>
+					</ul>		
+					<button class="select_f_btn" type="button">
+						<span class="ir">학부관련연구소</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+<script>
+//split
+Splitting();
+
+
+// 드래그알림창 눌렀을 때 사라지게 하는 스크립트
+$(".table_prev_mo").click(function() {
+	$(".table_prev_mo").fadeOut();
+});
+
+
+//사이트맵
+$(".hpc_sm").click(function(){
+    $(".site_map").fadeIn();
+});
+
+$(".site_map, .hpc_sm_close").click(function(){
+    $(".site_map").fadeOut();
+});
+
+</script>
+
+<script>
+//패밀리사이트
+jQuery(function($){	
+	var foot_select = $('.select_footer ul');
+	var select_btn = $('.select_f_btn');
+	var f_sel_child = $('.select_footer>ul>li>a');
+
+	function show_option(){
+		$(this).parents('.select_footer').find('ul').toggleClass('open');
+		$(this).toggleClass('on');
+	}
+	function moveFamsite(){
+		$(this).parents('.select_footer').find('ul').toggleClass('open');
+		select_btn.toggleClass('on');
+	}	
+	select_btn.click(show_option);
+	f_sel_child.click(moveFamsite);
+});
+</script>
+
+
+<button type="button" id="top_btn">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+</button>
+<script>
+$(function() {
+	$("#top_btn").on("click", function() {
+		$("html, body").animate({scrollTop:0}, '500');
+		return false;
+	});
+});
+</script>
+
+<script>
+    // 드래그알림창 눌렀을 때 사라지게 하는 스크립트
+    $(".table_prev_mo").click(function() {
+        $(".table_prev_mo").fadeOut();
+    });
+
+</script>
+
+
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : notice_2025 -->
