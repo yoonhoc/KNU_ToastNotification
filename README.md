@@ -71,3 +71,6 @@ powershell -ExecutionPolicy Bypass -File .\scripts\register-task.ps1 `
 
 등록되는 작업 이름은 `KNU_ToastNotification`입니다. 같은 이름의 기존 작업은
 새 설정으로 교체됩니다.
+
+과거 버전의 `KNU_알림` 작업이 관리자 권한으로 등록되어 있다면 제거를 위해
+이 스크립트를 관리자 PowerShell에서 한 번 실행해야 할 수 있습니다.

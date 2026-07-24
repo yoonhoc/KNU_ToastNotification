@@ -61,6 +61,20 @@ if ($null -ne $existingTask) {
     Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false
 }
 
+$legacyTaskName = "KNU_" + [char]0xC54C + [char]0xB9BC
+$legacyTask = Get-ScheduledTask -TaskName $legacyTaskName -ErrorAction SilentlyContinue
+if ($null -ne $legacyTask) {
+    try {
+        Unregister-ScheduledTask -TaskName $legacyTaskName -Confirm:$false
+    }
+    catch {
+        Write-Warning (
+            "The legacy task could not be removed. " +
+            "Run this script once from an elevated PowerShell window to remove it."
+        )
+    }
+}
+
 Register-ScheduledTask `
     -TaskName $TaskName `
     -Action $action `
