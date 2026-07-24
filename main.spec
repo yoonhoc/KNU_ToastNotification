@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ["main.py"],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[("knu-emblem.ico", ".")],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -22,7 +22,8 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='main',
+    name="KNUToastNotification",
+    icon="knu-emblem.ico",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

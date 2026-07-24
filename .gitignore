@@ -1,4 +1,6 @@
 /.venv
 __pycache__/
-
 current_list_num.txt
+/build/
+/dist/
+*.log
